@@ -11,8 +11,4 @@ public class Entry {
         this.priority = priority;
         this.notes = notes;
     }
-
-    public String getInfo{
-        return priority + "; " + notes;
-    }
 }

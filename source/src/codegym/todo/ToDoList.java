@@ -4,16 +4,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ToDoList {
-    Entry[] list = new Entry[20];
+    Entry[] list = new Entry[3];
     int length;
+    int arrsize = list.length;
 
     public void showTodoList() {
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i].);
+        for (int i = 0; i < arrsize; i++) {
+            System.out.println(list[i].notes + "; " + list[i].priority);
         }
     }
     public void addEntry(Entry entry){
-        list[Entry.count] = (entry);
+        list[Entry.count] = entry;
         Entry.count++;
     }
 //
@@ -21,13 +22,11 @@ public class ToDoList {
 //
 //    }
 //
-//    boolean void removeEntry() {
-//        System.out.println("Are you sure ?");
-//    }
-//
-
-//
-//    public void getEntryById(int id) {
-//
-//    }
+    public void removeEntry(int index) {
+        for (int i = index; i < list.length - 1; i++) {
+            list[i] = list[i + 1];
+        }
+        arrsize--;
+        showTodoList();
+    }
 }
