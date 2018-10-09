@@ -29,4 +29,19 @@ public class ToDoList {
         arrsize--;
         showTodoList();
     }
+
+    public void sortEntryByPriority() {
+        for (int i = 0; i < arrsize; i++) {
+            for (int j = i + 1; j < arrsize; j++) {
+            	Entry item1 = list[i];
+            	Entry item2 = list[j];
+                if (item1.priority > item2.priority) {
+                	Entry temp = list[i];
+                	list[i] = list[j];
+                	list[j] = temp;
+                }
+            }
+        }
+        showTodoList();
+    }
 }
