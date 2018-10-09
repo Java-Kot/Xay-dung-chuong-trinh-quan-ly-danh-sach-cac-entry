@@ -13,6 +13,7 @@ public class TestToDo {
         todo.addEntry(taptheduc);
         todo.addEntry(dihoc);
         todo.showTodoList();
+        todo.sortEntryByPriority();
         todo.removeEntry(1);
 //        System.out.println();
     }
